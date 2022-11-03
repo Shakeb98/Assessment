@@ -226,7 +226,6 @@ export default FlatListRef = () => {
                         <Text style={styles.scrollUpButtonText}>Scroll To Top</Text>
                     </TouchableOpacity>
                 }
-
             </View>
         </SafeAreaView>
     )

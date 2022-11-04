@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Alert ,AsyncStorage} from 'react-native'
+import { Text, StyleSheet, View, AsyncStorage } from 'react-native'
 import React, { Component } from 'react'
 import Header from './Header'
 import InputText from './InputText'
@@ -28,14 +28,13 @@ export default class SignUp extends Component {
         })
     }
 
-
     render() {
         return (
             <View style={styles.backgroundImage}>
                 <View style={styles.completeScreen}>
                     <Header />
                     <View style={styles.InputTextAll}>
-                        <InputText placeholder="Name" type={'name'} stateChange={this.stateChange} />
+                        <InputText value={this.state} placeholder="Name" type={'name'} stateChange={this.stateChange} />
                         <InputText placeholder="Email" type={'email'} stateChange={this.stateChange} />
                         <InputText placeholder="Phone" type={'phone'} stateChange={this.stateChange} />
                         <InputText placeholder="Password" type={'password'} stateChange={this.stateChange} />
@@ -44,7 +43,6 @@ export default class SignUp extends Component {
                     <CreateButton onPress={() => {
                         this.storeData();
                         this.props.navigation.navigate(DataFile);
-
                     }} />
                     <View style={styles.lastText}>
                         <Text>Already have an account ?</Text>

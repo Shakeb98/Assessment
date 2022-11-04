@@ -8,6 +8,7 @@ export default class InputText extends Component {
         return (
             <View>
                 <TextInput
+                 value={this.props.value}
                  placeholder={this.props.placeholder} 
                  onChangeText={(text) => this.props.stateChange(text, this.props.type)} 
                  style={myStyles.inputText} />

@@ -13,10 +13,10 @@ export default class DataFile extends Component {
         await AsyncStorage.clear();
         this.props.navigation.navigate('SignUp')
     }
+
     readData = async () => {
         value = await AsyncStorage.getItem('userInfomation');
         this.setState({ value: JSON.parse(value) })
-     
     };
 
     render() {
@@ -39,6 +39,7 @@ export default class DataFile extends Component {
         )
     }
 }
+
 const styles = StyleSheet.create({
     getButton: {
         backgroundColor: 'gray',
